@@ -90,7 +90,7 @@ data_latent_tree <- list(I=length(unique(dt_tree$item)),J=length(unique(dt_tree$
                          y=dt_tree$response
 )
 
-fit_rse_latent_tree <- stan(file='Documents/latent_irtree_2pl.stan',data=data_latent_tree,chain=3, iter = 500,cores=3)
+fit_rse_latent_tree <- stan(file='Documents/latent_irtree_2pl.stan',data=data_latent_tree,chain=3, iter = 5000,cores=3)
 fit_rse_latent_tree_summary <- summary(fit_rse_latent_tree )$summary
 
 ######## trace plot examples
